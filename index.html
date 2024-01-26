@@ -53,13 +53,14 @@
 
     .columns {
       display: flex;
-      justify-content: space-around;
-      flex-wrap: wrap;
+      flex-direction: column;
+      align-items: center;
     }
 
     .column {
-      width: 45%;
+      width: 100%;
       margin: 10px;
+      box-sizing: border-box;
     }
 
     @keyframes fadeIn {
@@ -116,6 +117,18 @@
         transform: translateX(0);
       }
     }
+
+    /* Media Queries */
+    @media (min-width: 600px) {
+      .columns {
+        flex-direction: row;
+        justify-content: space-around;
+      }
+
+      .column {
+        width: 45%;
+      }
+    }
   </style>
 </head>
 
@@ -126,7 +139,7 @@
   </header>
 
   <div class="opening-text">
-    <p>Bem-vindo ao Jornal Piabal, sua fonte confiável de notícias locais, nacionais e globais. Fique atualizado com as últimas informações, análises e eventos que moldam o nosso mundo.</p>
+    <p>Bem-vindo ao Jornal Piabal, sua fonte confiável de notícias locais e globais. Fique atualizado com as últimas informações, análises e eventos que moldam o nosso mundo.</p>
   </div>
 
   <div class="columns">
