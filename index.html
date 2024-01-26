@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,7 +22,7 @@
 
     h1 {
       margin: 0;
-      font-size: 3em; /* Aumenta o tamanho da fonte */
+      font-size: 3em;
       animation: fadeInUp 1s ease-out, colorChange 5s infinite alternate;
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
       display: inline-block;
@@ -31,14 +32,14 @@
     .opening-text {
       text-align: center;
       margin: 2em;
-      font-size: 1.5em; /* Aumenta o tamanho da fonte */
-      animation: fadeIn 1.5s ease-out, scaleText 5s infinite alternate; /* Adiciona efeito de escala */
+      font-size: 1.5em;
+      animation: fadeIn 1.5s ease-out, scaleText 5s infinite alternate;
     }
 
     .headline {
       text-align: center;
       margin: 2em;
-      font-size: 1.8em; /* Aumenta o tamanho da fonte */
+      font-size: 1.8em;
       font-weight: bold;
       animation: fadeIn 2s ease-out;
     }
@@ -65,6 +66,7 @@
       from {
         opacity: 0;
       }
+
       to {
         opacity: 1;
       }
@@ -75,6 +77,7 @@
         opacity: 0;
         transform: translateY(20px);
       }
+
       to {
         opacity: 1;
         transform: translateY(0);
@@ -85,6 +88,7 @@
       from {
         color: #333;
       }
+
       to {
         color: #FFD700;
       }
@@ -94,12 +98,27 @@
       from {
         transform: scale(1);
       }
+
       to {
-        transform: scale(1.1); /* Aumenta a escala */
+        transform: scale(1.1);
+      }
+    }
+
+    /* New keyframes for the third news fadeInRight */
+    @keyframes fadeInRight {
+      from {
+        opacity: 0;
+        transform: translateX(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateX(0);
       }
     }
   </style>
 </head>
+
 <body>
 
   <header>
@@ -126,7 +145,18 @@
         <p><a href="https://www.terra.com.br/noticias/brasil/politica/ministerio-da-justica-recebeu-mulher-de-lider-do-comando-vermelho-em-duas-ocasioes,8e76dadedc8c311e11acee400a897fe31nlwxqff.html" target="_blank">Leia mais</a></p>
       </div>
     </div>
+
+    <!-- New news section -->
+    <div class="column">
+      <img class="photo" src="https://abre.ai/iHdJ" alt="Foto representativa da terceira manchete">
+      <div class="headline">
+        <p>Notícia de Última Hora: Imprensa é paga para ser militante e perseguir opositores</p>
+        <p><a href="https://jornalpiabal.github.io/noticia/imprensa.html" target="_blank">Leia mais</a></p>
+        <p><a href="https://abre.ai/iHeh" target="_blank">Assista ao vídeo em quem os militantes na redação sorrindo de mais uma investida de Alexandre de Moraes contra o Congresso</a></p>
+      </div>
+    </div>
   </div>
 
 </body>
+
 </html>
