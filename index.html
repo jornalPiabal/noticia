@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -14,29 +13,32 @@
     }
 
     header {
-      background-color: #333;
-      color: #fff;
+      background: linear-gradient(90deg, #4CAF50 50%, #FFD700 50%);
+      color: #333;
       text-align: center;
       padding: 1em 0;
     }
 
     h1 {
       margin: 0;
-      font-size: 2em;
-      animation: fadeInUp 1s ease-out;
+      font-size: 3em; /* Aumenta o tamanho da fonte */
+      animation: fadeInUp 1s ease-out, colorChange 5s infinite alternate;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      display: inline-block;
+      padding: 5px 10px;
     }
 
     .opening-text {
       text-align: center;
       margin: 2em;
-      font-size: 1.2em;
-      animation: fadeIn 1.5s ease-out;
+      font-size: 1.5em; /* Aumenta o tamanho da fonte */
+      animation: fadeIn 1.5s ease-out, scaleText 5s infinite alternate; /* Adiciona efeito de escala */
     }
 
     .headline {
       text-align: center;
       margin: 2em;
-      font-size: 1.5em;
+      font-size: 1.8em; /* Aumenta o tamanho da fonte */
       font-weight: bold;
       animation: fadeIn 2s ease-out;
     }
@@ -76,6 +78,24 @@
       to {
         opacity: 1;
         transform: translateY(0);
+      }
+    }
+
+    @keyframes colorChange {
+      from {
+        color: #333;
+      }
+      to {
+        color: #FFD700;
+      }
+    }
+
+    @keyframes scaleText {
+      from {
+        transform: scale(1);
+      }
+      to {
+        transform: scale(1.1); /* Aumenta a escala */
       }
     }
   </style>
